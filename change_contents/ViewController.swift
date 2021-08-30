@@ -115,16 +115,7 @@ class ViewController: UIViewController {
         gradientView.layer.addSublayer(gradientLayer)
       
         gradientLabel.text = String(format: "%.2f", gradientSlider.value)
-        
-        catImageView.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat (greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha:CGFloat(alphaSlider.value))
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        greenLabel.text =  String(format: "%.2f", greenSlider.value)
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        alphaLabel.text =  String(format: "%.2f", alphaSlider.value)
+     
     }
     
     @IBAction func changeWhiteBackground(_ sender: Any) {
@@ -209,6 +200,7 @@ class ViewController: UIViewController {
     }
     
     func setShadowOpacity() {
+        
         shadowView.layer.cornerRadius = CGFloat(conerRadiusSlider.value)
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
         shadowView.layer.shadowOpacity = shadowOpacitySlider.value
@@ -220,6 +212,7 @@ class ViewController: UIViewController {
         conerRadiusLabel.text = "0"
         conerRadiusSlider.value = 0
         catImageView.layer.cornerRadius = CGFloat(conerRadiusSlider.value)
+        shadowView.layer.cornerRadius = CGFloat(conerRadiusSlider.value)
     }
     
     // clear border width button
